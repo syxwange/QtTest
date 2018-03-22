@@ -39,12 +39,6 @@
     <ClCompile Include="CWorkThread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CInput.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CDecode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="copenglwidget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -52,6 +46,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CMediaOutput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CMediaInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,7 +65,7 @@
     <QtMoc Include="CMediaOutput.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="CInput.h">
+    <QtMoc Include="CMediaInput.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -83,9 +80,6 @@
     </QtRcc>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CDecode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CMediaData.h">
       <Filter>Header Files</Filter>
     </ClInclude>

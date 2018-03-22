@@ -11,7 +11,6 @@ class QtTestUI : public QWidget
 
 public:
 	QtTestUI(QWidget *parent = Q_NULLPTR);
-	int init();
 signals:
 	void sendPic(const AVFrame *pic);
 private:

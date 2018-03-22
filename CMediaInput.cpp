@@ -1,4 +1,4 @@
-#include "CInput.h"
+#include "CMediaInput.h"
 
 
 
@@ -124,6 +124,7 @@ int CMediaInput::initDecode()
 		m_pACodecCtx = avcodec_alloc_context3(pInCodec);
 		if (!m_pVCodecCtx)	return -1;
 
+		
 		int  ret = avcodec_parameters_to_context(m_pACodecCtx, m_pACodecPara);
 		if (ret < 0)	 return ret;
 		ret = avcodec_open2(m_pACodecCtx, pInCodec, nullptr);
@@ -224,12 +225,7 @@ int CInFile::decode()
 			ret = avcodec_send_packet(m_pACodecCtx, &pkt);
 			if (ret < 0)  continue;
 			AVFrame *frame = av_frame_alloc();
-			ret = avcodec_receive_frame(m_pACodecCtx, frame);
-			/*if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF)
-			{
-			av_frame_free(&frame);
-			continue;
-			}*/
+			ret = avcodec_receive_frame(m_pACodecCtx, frame);			
 			if (ret < 0)
 			{
 				av_frame_free(&frame);

@@ -3,7 +3,7 @@
 #include <QThread>
 
 #include "CMediaData.h"
-#include "CInput.h"
+#include "CMediaInput.h"
 #include "CMediaOutput.h"
 
 class CWorkThread : public QObject

@@ -1,6 +1,5 @@
 #include "CWorkThread.h"
-#include "CInput.h"
-#include "CDecode.h"
+#include "CMediaInput.h"
 #include <qmessagebox.h>
 
 
@@ -32,7 +31,7 @@ int CWorkThread::init()
 	connect(m_pInThread, &QThread::started, m_pIn, &CInFile::decode);
 	connect(m_pOutThread, &QThread::started, m_pOut, &COutScreen::write);
 	connect(m_pOut, &COutScreen::sendPic, this, &CWorkThread::sendPic);
-	m_pIn->setUrl("aaa.flv");
+	m_pIn->setUrl("111.mp4");
 	auto ret = m_pIn->open();	
 	if (ret < 0)
 	{
@@ -44,6 +43,7 @@ int CWorkThread::init()
 	m_pInThread->start();
 	m_pOut->setWidth(m_pIn->getVCodecPara()->width);
 	m_pOut->setHeight(m_pIn->getVCodecPara()->height);
+	m_pOut->setAudioCodecPara(m_pIn->getACodecPara());
 	m_pOut->open();
 	m_pOut->moveToThread(m_pOutThread);
 	m_pOutThread->start();

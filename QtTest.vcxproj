@@ -115,8 +115,7 @@
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CDecode.cpp" />
-    <ClCompile Include="CInput.cpp" />
+    <ClCompile Include="CMediaInput.cpp" />
     <ClCompile Include="CMediaData.cpp" />
     <ClCompile Include="CMediaOutput.cpp" />
     <ClCompile Include="copenglwidget.cpp" />
@@ -137,11 +136,10 @@
     <QtMoc Include="CWorkThread.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="CInput.h" />
+    <QtMoc Include="CMediaInput.h" />
     <QtMoc Include="CMediaOutput.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CDecode.h" />
     <ClInclude Include="CMediaData.h" />
     <QtMoc Include="copenglwidget.h" />
   </ItemGroup>
